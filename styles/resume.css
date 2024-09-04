@@ -1,0 +1,152 @@
+:root {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #141414;
+}
+a {
+  color: #4e8bb4;
+}
+#resume {
+  max-width: 1000px;
+  margin: 5rem auto;
+  background: #282828;
+}
+#resume .bi-wrapper {
+  gap: 1rem;
+  padding: 2rem;
+  display: flex;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #373737;
+}
+#resume .bi-wrapper .left {
+  flex-grow: 1;
+  display: flex;
+}
+#resume .bi-wrapper .left > div:last-child {
+  margin-left: 1.5rem;
+}
+#resume .bi-wrapper .left h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0.5rem 0 0.2rem;
+}
+#resume .bi-wrapper .left p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #4e8bb4;
+}
+#resume .bi-wrapper .left img {
+  width: 6.4rem;
+}
+#resume .bi-wrapper .right {
+  margin: 0 2rem 0 0;
+  list-style: none;
+}
+#resume .bi-wrapper .right span {
+  color: #fff;
+  width: 8rem;
+  text-align: right;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+#resume .bi-wrapper .bio {
+  flex-basis: 100%;
+}
+.main-wrapper {
+  display: flex;
+}
+.main-wrapper .history {
+  padding: 1rem 2rem;
+}
+.main-wrapper .history > section h4 {
+  color: #fff;
+  padding: 0.5rem 3.2rem;
+  background: #373737;
+  font-size: 1.1rem;
+  position: relative;
+}
+.main-wrapper .history > section .title i {
+  top: 0;
+  width: 2.5rem;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: #48a5d2;
+  border-radius: 0.2rem;
+}
+.main-wrapper .history .edu .title i {
+  background: #68a327;
+}
+.main-wrapper .history > section .title i::after {
+  content: '';
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 0.2rem 0.2rem 0 0;
+  border-color: #fff;
+  position: absolute;
+  transform: translate(-50%, -70%) rotate(135deg);
+}
+.main-wrapper .history .item {
+  display: flex;
+  row-gap: 1rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  flex-flow: wrap row;
+  border-bottom: 1px solid #373737;
+}
+.main-wrapper .history .item div:first-child {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.main-wrapper .history .item h6 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.main-wrapper .history .item i {
+  left: 0;
+  top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #48a5d2;
+  position: absolute;
+}
+.main-wrapper .history .item i::after {
+  content: '';
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 0.1rem 0.1rem 0 0;
+  border-color: #fff;
+  position: absolute;
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+.main-wrapper .history .edu .item i {
+  background: #68a327;
+}
+.main-wrapper .history .item div:last-child {
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+.main-wrapper .history .item:last-child {
+  border: none;
+}
+.main-wrapper .skills {
+  min-width: 300px;
+}
