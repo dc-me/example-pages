@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Resume</title>
+    <style>
+      :root {
+        color: #878785;
+        font-size: 16px;
+      }
+      body {
+        background: #141414;
+      }
+      a {
+        color: #4e8bb4;
+      }
+      #resume {
+        max-width: 900px;
+        margin: 5rem auto;
+        background: #282828;
+      }
+      #resume .bi-wrapper {
+        gap: 1rem;
+        padding: 2rem;
+        display: flex;
+        row-gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        border-bottom: 1px solid #373737;
+      }
+      #resume .bi-wrapper .left {
+        flex-grow: 1;
+        display: flex;
+      }
+      #resume .bi-wrapper .left > div:last-child {
+        margin-left: 1.5rem;
+      }
+      #resume .bi-wrapper .left h2 {
+        color: #fff;
+        font-size: 2.4rem;
+        margin: 0.5rem 0 0.2rem;
+      }
+      #resume .bi-wrapper .left p {
+        margin: 0;
+        color: #4e8bb4;
+      }
+      #resume .bi-wrapper .left img {
+        width: 8rem;
+        float: left;
+      }
+      #resume .bi-wrapper .right {
+        margin: 0 2rem 0 0;
+        list-style: none;
+      }
+      #resume .bi-wrapper .right span {
+        color: #fff;
+        width: 8rem;
+        text-align: right;
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+      #resume .bi-wrapper .bio {
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="resume">
+      <section class="bi-wrapper">
+        <div class="left">
+          <div><img src="../images/cat-avatar.jpeg" alt="mr. fluffy" /></div>
+          <div>
+            <h2>Mr. Fluffy</h2>
+            <p>Full Stack Developer</p>
+          </div>
+        </div>
+        <ul class="right">
+          <li>
+            <span>Name:</span>
+            Mr. Fluffy
+          </li>
+          <li>
+            <span>Date of birth:</span>
+            June 6, 1970
+          </li>
+          <li>
+            <span>Name:</span>
+            San Francisco, CA 94102, US
+          </li>
+          <li>
+            <span>Phone:</span>
+            +1-666-666-1314
+          </li>
+          <li>
+            <span>Email:</span>
+            fluffylovesyou@gmail.com
+          </li>
+          <li>
+            <span>Website:</span>
+            <a href="https://danychen.me/fluffy">https://danychen.me/fluffy</a>
+          </li>
+        </ul>
+        <div class="bio">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+          natus. Nobis odit atque odio. Velit dolore voluptatum necessitatibus
+          ipsam reprehenderit? Id modi, necessitatibus officia rerum commodi
+          voluptate beatae tenetur nisi! Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Facilis esse eos delectus quos. Perspiciatis,
+          facilis vel repellat cum pariatur deserunt
+        </div>
+      </section>
+      <div></div>
+    </main>
+  </body>
+</html>
