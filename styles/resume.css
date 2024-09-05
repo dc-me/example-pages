@@ -11,9 +11,23 @@ body {
 a {
   color: #4e8bb4;
 }
+.percent {
+  display: block;
+  height: 1rem;
+  background: #3b3b3b;
+}
+.percent i {
+  font-size: 0.8rem;
+  color: #fff;
+  display: block;
+  height: 100%;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+}
 #resume {
   max-width: 1000px;
-  margin: 5rem auto;
+  margin: 4rem auto 5rem;
   background: #282828;
 }
 #resume .bi-wrapper {
@@ -87,7 +101,7 @@ a {
   background: #68a327;
 }
 .main-wrapper .history > section .title i::after {
-  content: '';
+  content: "";
   width: 30%;
   height: 30%;
   top: 50%;
@@ -125,7 +139,7 @@ a {
   position: absolute;
 }
 .main-wrapper .history .item i::after {
-  content: '';
+  content: "";
   width: 30%;
   height: 30%;
   top: 50%;
@@ -149,4 +163,58 @@ a {
 }
 .main-wrapper .skills {
   min-width: 300px;
+  padding: 1rem 2rem;
 }
+.main-wrapper .skills h4 {
+  color: #fff;
+  font-size: 1.1rem;
+}
+.main-wrapper .skills .ps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-wrapper .skills .ps .percent {
+  margin: 0.3rem 0;
+}
+.main-wrapper .skills .gs {
+}
+.li-square {
+  list-style: none;
+  padding: 0;
+}
+.li-square li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-top: 0.5rem;
+}
+.li-square li::before {
+  top: 12%;
+  content: "";
+  width: 0.8rem;
+  height: 76%;
+  left: 0;
+  position: absolute;
+  background: #ee2c00;
+}
+.li-square li:nth-child(5n + 1)::before {
+  background: #2d7ea1;
+}
+.li-square li:nth-child(5n + 2)::before {
+  background: #49a3cf;
+}
+.li-square li:nth-child(5n + 3)::before {
+  background: #67a434;
+}
+.li-square li:nth-child(5n + 4)::before {
+  background: #fabf23;
+}
+.li-square li:nth-child(5n + 5)::before {
+  background: #ee2c00;
+}
+/* .main-wrapper .skills .gs {
+  list-style: square;
+}
+.main-wrapper .skills .gs ::marker {
+  color: red;
+} */
