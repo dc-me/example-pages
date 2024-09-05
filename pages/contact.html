@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .contact {
+      color: #ffffff;
+      padding: 2rem 1.5rem 3rem;
+      max-width: 500px;
+      min-width: 350px;
+      text-align: center;
+      position: relative;
+      background-color: #fb364a;
+    }
+    .contact h1 {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+    .contact .close {
+      top: 1rem;
+      font-style: normal;
+      font-size: 1.2rem;
+      position: absolute;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      color: inherit;
+      display: block;
+      border: none;
+      padding: 1rem 0.5rem;
+      margin-top: 1.2rem;
+      outline: none;
+      background-color: #cb2a3c;
+    }
+    .contact input::placeholder, .contact textarea::placeholder {
+      color: #f4efef;
+    }
+    .contact button[type="submit"] {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: none;
+      color: #cb2a3c;
+      box-shadow: 0px 4px #7e1a24;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <form class="contact">
+    <i class="close">&#10005;</i>
+    <h1>Get in Touch</h1>
+    <span>Good choice...</span>
+    <input type="text" name="name" id="name" placeholder="You name please">
+    <input type="email" name="email" id="email" placeholder="A contact email">
+    <input type="text" name="project" id="project" placeholder="About a new project">
+    <textarea name="msg" id="msg" placeholder="How can i help?"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
