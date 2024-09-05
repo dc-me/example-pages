@@ -1,0 +1,50 @@
+:root {
+  font-size: 16px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  width: 16%;
+  min-width: 280px;
+  padding: 2rem 2.5rem;
+  background: #e8e8e8;
+  text-align: center;
+  position: relative;
+  border: 1px solid #000;
+  box-shadow: 4px 10px 12px 0 #888888;
+}
+.login > img {
+  width: 5rem;
+  top: -2.5rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  position: absolute;
+}
+.login h1 {
+  margin: 3rem 0 3rem;
+}
+.login input {
+  width: 100%;
+  display: block;
+  margin: 1.8rem auto 0;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem 0;
+  text-align: center;
+  background: #d3d3d3;
+}
+.login input[type='submit'] {
+  color: #ecffff;
+  background: #50c9e6;
+}
+.login a:link {
+  color: #eeaf3b;
+  margin: 2rem 0 1rem;
+  display: block;
+  text-decoration: none;
+}
