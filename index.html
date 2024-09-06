@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill based assigment home page</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/fontello.css" />
+  </head>
+  <body>
+    <header id="header">Skill Based Assigment</header>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="nav">
+          <a><i class="icon-user-add"></i>New User</a>
+          <a href=""><i class="icon-users"></i>User List</a>
+          <a href=""><i class="icon-comment"></i>Message Me</a>
+          <a href="pages/resume.html">
+            <i class="icon-handshake-o"></i>Resume
+          </a>
+          <a href="pages/contact.html"><i class="icon-qq"></i>Contact Me</a>
+          <a href="pages/login.html"><i class="icon-user-1"></i>Login</a>
+        </div>
+      </aside>
+      <section class="container"></section>
+    </div>
+  </body>
+  <script>
+    function ready(fn) {
+      if (document.readyState != "loading") {
+        fn();
+      } else if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", fn);
+      } else {
+        document.attachEvent("onreadystatechange", function () {
+          if (document.readyState != "loading") fn();
+        });
+      }
+    }
+
+    ready(function() {
+      var body = document.querySelector("body");
+      body.className = 'ready';
+    });
+  </script>
+</html>
