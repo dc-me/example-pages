@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="styles/fontello.css" />
   </head>
   <body>
-    <header id="header">Skill Based Assigment</header>
+    <header id="header">
+      <img height="40%" src="images/skills.png" alt="skills" />
+      <h2>Skill Based Assigment</h2>
+      <img height="60%" src="images/cat-working.webp" alt="cat working" />
+    </header>
     <div class="container">
       <aside class="sidebar">
         <div class="nav">
-          <a><i class="icon-user-add"></i>New User</a>
+          <a class="active"><i class="icon-user-add"></i>New User</a>
           <a href=""><i class="icon-users"></i>User List</a>
           <a href=""><i class="icon-comment"></i>Message Me</a>
           <a href="pages/resume.html">
@@ -38,9 +42,9 @@
       }
     }
 
-    ready(function() {
+    ready(function () {
       var body = document.querySelector("body");
-      body.className = 'ready';
+      body.className = "ready";
     });
   </script>
 </html>

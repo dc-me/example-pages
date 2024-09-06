@@ -20,15 +20,20 @@ body {
   color: #fff;
   height: 14rem;
   text-align: center;
-  font-size: 0.8rem;
-  line-height: 200px;
   font-family: "Nerko One", cursive;
   font-weight: 400;
   font-style: normal;
-  transition: font-size 3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(90deg, #f4a261 0%, #e76f51 100%);
 }
-.ready #header {
+#header h2 {
+  font-size: 0.8rem;
+  margin: 0 4rem;
+  transition: font-size 3s ease-in;
+}
+.ready #header h2 {
   font-size: 3rem;
 }
 .container {
@@ -55,6 +60,9 @@ body {
 .container > aside .nav a i {
   margin-right: 0.6rem;
 }
-.container > aside .nav a:hover {
+.container > aside .nav a.active {
   background: #e76f51;
+}
+.container > aside .nav a:hover {
+  background: #e9c46a;
 }
