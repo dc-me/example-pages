@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill based assigment home page</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/fontello.css" />
+    <style>
+      form {
+        width: 80%;
+      }
+      form .row {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      form .row label {
+        width: 80px;
+        text-align: right;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+      form .row input, form .row textarea {
+        width: 80%;
+        padding: 0.5rem;
+      }
+      form .row button[type="submit"] {
+        color: #fff;
+        background: #e76f51;
+        border: none;
+        cursor: pointer;
+        padding: 1rem 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <img height="40%" src="../images/skills.png" alt="skills" />
+      <h2>Skill Based Assigment</h2>
+      <img height="60%" src="../images/cat-working.webp" alt="cat working" />
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="nav">
+          <a href="../index.html"><i class="icon-user-add"></i>New User</a>
+          <a href="./user-list.html"><i class="icon-users"></i>User List</a>
+          <a href="#" class="active"><i class="icon-comment"></i>Message Me</a>
+          <a href="./resume.html"> <i class="icon-handshake-o"></i>Resume </a>
+          <a href="./contact.html"><i class="icon-qq"></i>Contact Me</a>
+          <a href="./login.html"><i class="icon-user-1"></i>Login</a>
+        </div>
+      </aside>
+      <section class="content">
+        <form action="#">
+          <div class="row">
+            <label for="">Name:</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="row">
+            <label for="msg">Message:</label>
+            <textarea rows="10" name="msg" id="msg"></textarea>
+          </div>
+          <div class="row">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+  <script>
+    function ready(fn) {
+      if (document.readyState != "loading") {
+        fn();
+      } else if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", fn);
+      } else {
+        document.attachEvent("onreadystatechange", function () {
+          if (document.readyState != "loading") fn();
+        });
+      }
+    }
+
+    ready(function () {
+      var body = document.querySelector("body");
+      body.className = "ready";
+    });
+  </script>
+</html>
