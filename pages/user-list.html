@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill based assigment home page</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/fontello.css" />
+    <style>
+      .container > .content {
+        display: block;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .table > :not(caption) > * > *   {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #666;
+      }
+      .table tr:nth-child(even){
+        background-color: #e9c46a;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <img height="40%" src="../images/skills.png" alt="skills" />
+      <h2>Skill Based Assigment</h2>
+      <img height="60%" src="../images/cat-working.webp" alt="cat working" />
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="nav">
+          <a href="../index.html"><i class="icon-user-add"></i>New User</a>
+          <a class="active" href="#"><i class="icon-users"></i>User List</a>
+          <a href="./message-me.html"><i class="icon-comment"></i>Message Me</a>
+          <a href="./resume.html"> <i class="icon-handshake-o"></i>Resume </a>
+          <a href="./contact.html"><i class="icon-qq"></i>Contact Me</a>
+          <a href="./login.html"><i class="icon-user-1"></i>Login</a>
+        </div>
+      </aside>
+      <section class="content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">Status</th>
+              <th scope="col">Last login</th>
+              <th scope="col">Created at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Dany</td>
+              <td>Active</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Dany</td>
+              <td>Active</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Dany</td>
+              <td>Disabled</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Dany</td>
+              <td>Active</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Dany</td>
+              <td>Disabled</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Dany</td>
+              <td>Active</td>
+              <td>09/27/2024 12:00 AM</td>
+              <td>09/27/2024 12:00 AM</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+  <script>
+    function ready(fn) {
+      if (document.readyState != "loading") {
+        fn();
+      } else if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", fn);
+      } else {
+        document.attachEvent("onreadystatechange", function () {
+          if (document.readyState != "loading") fn();
+        });
+      }
+    }
+
+    ready(function () {
+      var body = document.querySelector("body");
+      body.className = "ready";
+    });
+  </script>
+</html>
