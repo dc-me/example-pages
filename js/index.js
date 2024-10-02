@@ -173,7 +173,7 @@ function createSvg(name) {
   svg.classList.add('nav-icon');
   const use = document.createElementNS(svgns, 'use');
   // use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', `#${name}`);
-  use.setAttribute('href', `../styles/svg/icon.svg#${name}`);
+  use.setAttribute('href', `./styles/svg/icon.svg#${name}`);
   svg.appendChild(use);
   return svg;
 }
