@@ -9,19 +9,19 @@ const menus = [
       },
       {
         text: 'Contact Me',
-        href: '../pages/contact.html',
+        href: './pages/contact.html',
       },
       {
         text: 'SBA307',
-        href: '../pages/sba307.html',
+        href: './pages/sba307.html',
       },
       {
         text: 'Resume',
-        href: '../pages/resume.html',
+        href: './pages/resume.html',
       },
       {
         text: 'Contact Me',
-        href: '../pages/contact.html',
+        href: './pages/contact.html',
       },
     ],
   },
