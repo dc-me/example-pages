@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skill based assigment home page</title>
-    <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/fontello.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/fontello.css" />
     <style>
       .register .row {
         display: flex;
@@ -22,23 +22,24 @@
         display: block;
         margin-bottom: 0.5rem;
       }
-      .register input, .register select {
+      .register input,
+      .register select {
         display: block;
         padding: 0.5rem;
         width: 200px;
         border-radius: 0.2rem;
         border: 1px solid #888;
       }
-      .register input[type="submit"] {
+      .register input[type='submit'] {
         margin: 2rem auto;
       }
     </style>
   </head>
   <body>
     <header id="header">
-      <img height="40%" src="images/skills.png" alt="skills" />
+      <img height="40%" src="../images/skills.png" alt="skills" />
       <h2>Skill Based Assigment</h2>
-      <img height="60%" src="images/cat-working.webp" alt="cat working" />
+      <img height="60%" src="../images/cat-working.webp" alt="cat working" />
     </header>
     <div class="container">
       <aside class="sidebar">
@@ -111,20 +112,20 @@
   </body>
   <script>
     function ready(fn) {
-      if (document.readyState != "loading") {
+      if (document.readyState != 'loading') {
         fn();
       } else if (document.addEventListener) {
-        document.addEventListener("DOMContentLoaded", fn);
+        document.addEventListener('DOMContentLoaded', fn);
       } else {
-        document.attachEvent("onreadystatechange", function () {
-          if (document.readyState != "loading") fn();
+        document.attachEvent('onreadystatechange', function () {
+          if (document.readyState != 'loading') fn();
         });
       }
     }
 
     ready(function () {
-      var body = document.querySelector("body");
-      body.className = "ready";
+      var body = document.querySelector('body');
+      body.className = 'ready';
     });
   </script>
 </html>
