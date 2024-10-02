@@ -4,14 +4,24 @@ const menus = [
     icon: 'cil-star',
     subMenus: [
       {
-        text: 'Login',
+        text: 'User Login',
+        page: '#loginPage',
       },
       {
         text: 'Contact Me',
         href: '../pages/contact.html',
       },
       {
-        text: 'Docs',
+        text: 'SBA307',
+        href: '../pages/sba307.html',
+      },
+      {
+        text: 'Resume',
+        href: '../pages/resume.html',
+      },
+      {
+        text: 'Contact Me',
+        href: '../pages/contact.html',
       },
     ],
   },
@@ -100,18 +110,16 @@ menuEl.addEventListener('click', function (e) {
         // the first menu of submenu as the page to open
         showPage({
           title: aEl.textContent,
+          page: aEl.getAttribute('page'),
         });
         aEl.classList.add('active');
       }
     } else {
       e.target.classList.add('active');
-      const pAttr = e.target.getAttribute('page');
       const page = {
         title: e.target.textContent,
+        page: e.target.getAttribute('page'),
       };
-      if (pAttr) {
-        page.page = pAttr;
-      }
       showPage(page);
     }
   }
@@ -144,6 +152,9 @@ function populateSidebar(menus, menuEl) {
         if (subMenu.href) {
           subAEl.setAttribute('href', subMenu.href);
         }
+        if (subMenu.page) {
+          subAEl.setAttribute('page', subMenu.page);
+        }
         subAEl.textContent = subMenu.text;
       });
     } else {
@@ -172,6 +183,15 @@ function showPage(page) {
   const app = document.getElementById('app');
   titleEl.textContent = page.title;
   if (page.page) {
+    app.innerHTML = '';
+    if (page.page[0] === '#') {
+      // template
+      const template = document.querySelector(page.page);
+      if (template) {
+        app.appendChild(template.content.cloneNode(true));
+        return template;
+      }
+    }
     app.innerHTML = page.page;
   } else {
     while (app.lastChild) {
