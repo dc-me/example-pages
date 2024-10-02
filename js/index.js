@@ -1,7 +1,22 @@
 const menus = [
   {
+    text: 'Pages',
+    icon: 'cil-star',
+    subMenus: [
+      {
+        text: 'Login',
+      },
+      {
+        text: 'Contact Me',
+        href: '../pages/contact.html',
+      },
+      {
+        text: 'Docs',
+      },
+    ],
+  },
+  {
     text: 'Games',
-    href: '/games',
     icon: 'cil-gamepad',
     subMenus: [
       {
@@ -24,24 +39,7 @@ const menus = [
     page: 'Sorry out of time to complete this.',
   },
   {
-    text: 'Pages',
-    href: '/pages',
-    icon: 'cil-star',
-    subMenus: [
-      {
-        text: 'Register',
-      },
-      {
-        text: 'Login',
-      },
-      {
-        text: 'Docs',
-      },
-    ],
-  },
-  {
     text: 'Base',
-    href: '/base',
     icon: 'cil-puzzle',
     subMenus: [
       {
@@ -60,7 +58,6 @@ const menus = [
   },
   {
     text: 'Buttons',
-    href: '/buttons',
     icon: 'cil-cursor',
     subMenus: [
       {
@@ -81,10 +78,13 @@ const pageEl = document.getElementById('page');
 const menuFrag = document.createDocumentFragment();
 const menuEl = menuFrag.appendChild(document.createElement('ul'));
 menuEl.addEventListener('click', function (e) {
+  // click the menu a
   if (e.target.localName === 'a') {
-    // click the menu a
+    // the menu has a href, use the normal borwser behaivor.
+    if (e.target.hasAttribute('href')) {
+      return true;
+    }
     e.preventDefault();
-    // this.children.getElementsByTagName('a');
     this.querySelectorAll('a').forEach((a) => {
       a.classList.remove('active');
     });
@@ -127,7 +127,9 @@ function populateSidebar(menus, menuEl) {
     const aEl = liEl.appendChild(document.createElement('a'));
     aEl.appendChild(createSvg(menu.icon));
     aEl.appendChild(document.createTextNode(menu.text));
-    aEl.href = menu.href;
+    if (menu.href) {
+      aEl.setAttribute('href', menu.href);
+    }
     if (menu.page) {
       aEl.setAttribute('page', menu.page);
     }
@@ -139,6 +141,9 @@ function populateSidebar(menus, menuEl) {
       menu.subMenus.forEach((subMenu) => {
         const subLiEl = subMenuEl.appendChild(document.createElement('li'));
         const subAEl = subLiEl.appendChild(document.createElement('a'));
+        if (subMenu.href) {
+          subAEl.setAttribute('href', subMenu.href);
+        }
         subAEl.textContent = subMenu.text;
       });
     } else {
