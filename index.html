@@ -13,6 +13,68 @@
       <h3 class="title"></h3>
       <div id="app"></div>
     </div>
+    <template id="loginPage">
+      <style>
+        .login {
+          max-width: 400px;
+          margin: 0 auto;
+          min-width: 280px;
+          padding: 2rem 2.5rem;
+          background: #e8e8e8;
+          text-align: center;
+          position: relative;
+          border: 1px solid #000;
+        }
+        .login input {
+          width: 100%;
+          display: block;
+          margin: 1.8rem auto 0;
+          border: none;
+          font-size: 1rem;
+          padding: 0.8rem 0;
+          text-align: center;
+          background: #d3d3d3;
+        }
+        .login input[type='submit'] {
+          color: #ecffff;
+          cursor: pointer;
+          background: #4645ab;
+          border-radius: 0.375rem;
+        }
+        .login .err-msg {
+          color: red;
+          margin-top: 1rem;
+          height: 0;
+          overflow: hidden;
+          transition: height 2s ease-in;
+        }
+        .login .err-msg.show {
+          height: auto;
+        }
+      </style>
+      <form id="login" class="login">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="UserName"
+          required
+          minlength="4"
+          maxlength="20"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+          minlength="4"
+        />
+        <input type="submit" value="Login" />
+        <div class="err-msg"></div>
+      </form>
+      <script src="js/login.js"></script>
+    </template>
     <script src="./js/index.js"></script>
   </body>
 </html>
