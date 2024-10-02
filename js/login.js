@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', function (e) {
       "Hooray, you've made it, You will be redirected to the logged in page."
     );
     if (yes) {
-      location.href = '../pages/sba307.html';
+      location.href = './pages/sba307.html';
     }
 
     console.log(usernameVal, passwordVal);
